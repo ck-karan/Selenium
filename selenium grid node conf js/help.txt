@@ -1,0 +1,20 @@
+status of the hub
+http://localhost:4444/grid/console
+
+command with port no to instantiate hub
+java -jar selenium-server-standalone.jar -role hub -port 5656
+
+--instantiate hub with json config file
+java -jar selenium-server-standalone-3.141.59.jar -role hub -hubConfig hubConfig.json -debug
+
+Registering node
+java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444
+
+--Registering node with json
+java -Dwebdriver.chrome.driver="chromedriver.exe" -Dwebdriver.ie.driver="IEDriverServer.exe" -Dwebdriver.gecko.driver="geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -nodeConfig nodeConfig.json
+
+
+
+
+
+
